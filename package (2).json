@@ -1,0 +1,16 @@
+{
+  "name": "shuttlemon",
+  "version": "1.0.0",
+  "description": "Shuttlemon: a walkable 3D moor with shared rooms. The only dependency is three.js, served by the server itself.",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "three": "0.128.0"
+  }
+}

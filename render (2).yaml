@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: shuttlemon
+    runtime: node
+    plan: free            # accounts need a persistent disk to survive restarts: see README ("Accounts")
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+    # Uncomment on a paid plan (e.g. plan: starter) so accounts and saves persist:
+    # disk:
+    #   name: shuttlemon-data
+    #   mountPath: /var/data
+    #   sizeGB: 1
